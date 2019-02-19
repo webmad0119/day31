@@ -13,18 +13,10 @@ export default class ToggableMenu extends Component {
     }
 
     render() {
-        let styleProp
-        
-        if (this.state.open) {
-            styleProp = {"display": "block"}
-        }   else {
-            styleProp = {"display": "none"}
-        }
-
         return (
             <div>
                 <h1>Menu <button onClick={this.clickHandler}>close/open</button></h1>
-                <ul className="menu" style={styleProp}>
+                <ul className="menu" style={{"display": this.state.open ? "none" : "block"}}>
                     <li className="item item-1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus, voluptate? Debitis quidem quibusdam ipsam explicabo nesciunt, quis voluptatum tempore quo minus cupiditate autem ratione quae aliquid deleniti amet quas atque.</li>
                     <li className="item item-2">Optio voluptatem alias, voluptates quo voluptas eligendi quis sint est possimus quod iusto porro sed aliquam eius necessitatibus cum, exercitationem vitae distinctio suscipit blanditiis, reiciendis libero ipsam. Fugiat, alias saepe!</li>
                     <li className="item item-3">Deleniti cumque, amet velit quibusdam, voluptatem doloremque porro ratione ipsum ipsam accusantium laboriosam. Aut voluptates nihil assumenda expedita laborum veritatis aspernatur totam, dicta pariatur deserunt atque voluptatem omnis doloribus odio.</li>
